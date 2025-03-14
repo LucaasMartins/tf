@@ -1,0 +1,9 @@
+FROM postgres:latest
+
+ENV POSTGRES_DB=northwind
+ENV POSTGRESS_USER=faat
+ENV POSTGRES_PASSWORD=faat
+
+COPY northwhind.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 5432
